@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 import smtplib
-import requests
+import os
 
-PASSWORD = 'nemaviselozinke1'
-MY_EMAIL = 'migservice30@gmail.com'
+PASSWORD = os.environ['LOZINKA']
+MY_EMAIL = os.environ['MEJL']
 
 
 app = Flask(__name__)
